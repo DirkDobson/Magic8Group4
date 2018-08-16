@@ -12,6 +12,8 @@
 #   @name = name
 # end
 
+@answers = ["Roll again.", "Your dreams will come true.","I'm not so sure.", "Most definitely.", "No way.", "Ask again later.", "Could be yes, could be no.", "True." ]
+
 def menu
   puts "Welcome to Magic8Group4"
   puts "Ask a Question"
@@ -49,3 +51,4 @@ end
 
 menu
 ran_answer
+menu
