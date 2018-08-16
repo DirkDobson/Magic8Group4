@@ -1,4 +1,4 @@
-ball_answers =
+def answers
   [
     "It is certain",
     "It is decidedly so",
@@ -21,14 +21,16 @@ ball_answers =
     "Outlook not so good",
     "Very doubtful"
   ]
-
-# Calling to array.
-def ball_answers
-  puts ball_answers.sample
 end
 
+# Calling to array.
+def random_answer
+  answers[Random.rand(answers.size)]
+end
+
+
 def shake_ball
-  Array.new(1 + Random.rand(3)).map{ "[shake]" }.join(" ")
+  Array.new(1 + Random.rand(3)).map{ |e| "[shake]" }.join(" ")
 end
 
 def wait_for_user
@@ -48,7 +50,7 @@ if __FILE__ == $0
   while (true)
     wait_for_user
     puts
-    puts shake_ball + " " + ball_answers
+    puts shake_ball + " " + random_answer
     puts
   end
 end
