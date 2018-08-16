@@ -10,4 +10,12 @@ def rolled_number
     puts "I'm not so sure."
   when 4
     puts "Most definitely."
+  when 5
+    puts "No way."
+  when 6
+    puts "Ask again later."
+  when 7
+    puts "Could be yes, could be no."
+  when 8
+    puts "True."
 end
