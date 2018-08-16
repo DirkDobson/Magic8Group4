@@ -21,7 +21,7 @@ def ran_answer
   if @question == "quit"
     exit
    else 
-     ran_num = 1 + rand(8)# + @questions_asked)
+     ran_num = 1 + rand(8) # + @questions_asked)
     # @rolled_number
      puts ran_num
   end

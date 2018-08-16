@@ -1,4 +1,4 @@
-require 'main.rb'
+
 
 def rolled_number
   case number
