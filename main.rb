@@ -1,16 +1,16 @@
 #create greeting menu
 #If else that gets.to_s if QUIT exit
 #If not QUIT 'else' rand (1..9 +(other_answers_generated))
-require_relative 'answers.rb'
+#require_relative 'answers.rb'
 
-@answers = []
-@question_asked = 0
-class MainMenu
+# @answers = []
+# @question_asked = 0
+# class MainMenu
+# attr_accessor :name
 
-
-def initialize(name)
-  @name = name
-end
+# def initialize(name)
+#   @name = name
+# end
 
 def menu
   puts "Welcome to Magic8Group4"
@@ -21,13 +21,31 @@ def ran_answer
   if @question == "quit"
     exit
    else 
-     ran_num = 1 + rand(8) # + @questions_asked)
-    # @rolled_number
-     puts ran_num
+     @number = rand(8 +1) # + @questions_asked)
+     case @number
+     when 1
+       puts "Roll again."
+     when 2
+       puts "Your dreams will come true."
+     when 3
+       puts "I'm not so sure."
+     when 4
+       puts "Most definitely."
+     when 5
+       puts "No way."
+     when 6
+       puts "Ask again later."
+     when 7
+       puts "Could be yes, could be no."
+     when 8
+       puts "True."
+   end
+     
+     
   end
 end
 
-start = MainMenu.new(start)
 
-start.menu
-start.ran_answer
+
+menu
+ran_answer
