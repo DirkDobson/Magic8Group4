@@ -1,5 +1,7 @@
 require 'colorize'
 
+@new_answers = []
+
 @answers =
  [ 
    "Never.",
@@ -23,7 +25,8 @@ require 'colorize'
   ] 
 
 def random_answer
-  @answers.sample
+  all_answers = @answers + @new_answers
+  all_answers.sample
 end
 
 def shakes
@@ -35,22 +38,26 @@ def add_answer
   puts "Type your own answer."
   puts
   new_answer = gets.strip
-  @answers << new_answer
+  @new_answers << new_answer
 end
 
 def print_answers
   puts
-  puts @answers
+  puts @answers + @new_answers
 end 
 
+def reset_answer
+  @new_answers.clear
+end
+
 def user_question
-  question = gets.chomp
+  question = gets.strip.downcase
   case question
-  when 'Add answer.'
+  when 'add answer'
     add_answer
-  when 'Reset answers.'
+  when 'reset answers'
     reset_answer
-  when 'Show answers.'
+  when 'show answers'
     print_answers
   when "no thanks"
     puts
