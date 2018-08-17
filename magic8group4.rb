@@ -68,7 +68,9 @@ def user_question
 end
 
 def prompt
+  puts "============================================================".colorize(:green)
   puts "Ask the Magic 8 Ball a question. Say, 'no thanks,' to leave.".colorize(:cyan)
+  puts "============================================================".colorize(:green)
 end
 
 if __FILE__ == $0
@@ -81,7 +83,8 @@ if __FILE__ == $0
     puts
     puts shakes + " " + random_answer
     puts
+    puts "============================================================".colorize(:green)
     puts "Ask another question. Or just say, 'no thanks'.".colorize(:cyan)
-    puts
+    puts  "============================================================".colorize(:green)
   end
 end
