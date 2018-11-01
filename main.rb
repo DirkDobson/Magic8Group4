@@ -1,54 +1,77 @@
-#create greeting menu
-#If else that gets.to_s if QUIT exit
-#If not QUIT 'else' rand (1..9 +(other_answers_generated))
-#require_relative 'answers.rb'
 
-# @answers = []
-# @question_asked = 0
-# class MainMenu
-# attr_accessor :name
-
-# def initialize(name)
-#   @name = name
-# end
-
-@answers = ["Roll again.", "Your dreams will come true.","I'm not so sure.", "Most definitely.", "No way.", "Ask again later.", "Could be yes, could be no.", "True." ]
+@answers = [
+  "Roll again.", 
+  "Your dreams will come true.",
+  "I'm not so sure.", 
+  "Most definitely.", 
+  "No way.", 
+  "Ask again later.", 
+  "Could be yes, could be no.", 
+  "True.", 
+  "No, No, No, No...",
+  "Yeah, Yeah, Yeah!!!",
+]
 
 def menu
-  puts "Welcome to Magic8Group4"
-  puts "Ask a Question"
+  puts "--------------"
+  puts "Welcome"
+  puts "--------------"
+  puts "Ask a question or type QUIT to exit"
+  puts "--------------"
+  ran_answer
 end
+
 def ran_answer
   @question = gets.to_s.strip.downcase
   if @question == "quit"
     exit
    else 
-     @number = rand(8 +1) # + @questions_asked)
+     @number = rand(8) 
      case @number
-     when 1
+     when 0
+       puts "--------------"
        puts "Roll again."
-     when 2
+       puts "--------------"
+       menu
+     when 1
+       puts "--------------"      
        puts "Your dreams will come true."
-     when 3
+       puts "--------------"
+       menu
+     when 2
+       puts "--------------"
        puts "I'm not so sure."
-     when 4
+       puts "--------------"
+       menu
+     when 3
+       puts "--------------"
        puts "Most definitely."
-     when 5
+       puts "--------------"
+       menu
+     when 4
+       puts "--------------"
        puts "No way."
-     when 6
+       puts "--------------"
+       menu
+     when 5
+       puts "--------------"
        puts "Ask again later."
-     when 7
+       puts "--------------"
+       menu
+     when 6
+       puts "--------------"
        puts "Could be yes, could be no."
-     when 8
+       puts "--------------"
+       menu
+     when 7
+       puts "--------------"
        puts "True."
-   end
-     
-     
+       puts "--------------"
+       menu
+   end  
   end
 end
 
 
 
-menu
-ran_answer
 menu
